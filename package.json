@@ -1,0 +1,19 @@
+{
+  "name": "eslint-plugin-svelte-reactive-vars",
+  "version": "1.0.0",
+  "author": {
+    "name": "StagnantIce",
+    "email": "tria-aa@mail.ru"
+  },
+  "main": "index.js",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "svelte",
+    "reactive",
+    "declaration"
+  ],
+  "peerDependencies": {
+    "eslint": "^8.0.0"
+  }
+}
