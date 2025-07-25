@@ -1,27 +1,37 @@
 # eslint-plugin-svelte-reactive-vars
 
-Автоматически объявляет переменные из реактивных выражений (`$:`) в Svelte, если они не были явно объявлены.
+Automatically declares variables from reactive statements (`$:`) in Svelte if they haven't been explicitly declared.
 
-## Установка
+## Installation
 
 ```bash
 npm install --save-dev eslint-plugin-svelte-reactive-vars
 ```
 
-## Использование
+## Usage
 
 ```js
-// .eslintrc.cjs
+// .eslintrc.cjs or .eslintrc.js
 module.exports = {
-  plugins: ['svelte-reactive-vars'],
-  extends: ['plugin:svelte-reactive-vars/recommended'],
+    parserOptions: {
+        ecmaVersion: "latest",
+        sourceType: "module",
+    },
+    plugins: ['svelte-reactive-vars'],
+    extends: ['plugin:svelte-reactive-vars/recommended'],
+    overrides: [
+        {
+            files: ['*.svelte'],
+            processor: 'svelte3/svelte3',
+        },
+    ],
 };
 ```
 
-## Пример
+## Example
 
 ```svelte
 <script lang="ts">
-$: foo = 'hello'; // Автоматически будет вставлено: let foo: string;
+$: foo = 'hello'; // Will automatically insert: let foo: string;
 </script>
 ```

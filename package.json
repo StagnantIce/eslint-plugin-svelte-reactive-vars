@@ -15,5 +15,9 @@
   ],
   "peerDependencies": {
     "eslint": "^8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/StagnantIce/eslint-plugin-svelte-reactive-vars"
   }
 }
